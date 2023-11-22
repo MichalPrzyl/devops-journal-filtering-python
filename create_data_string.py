@@ -5,9 +5,9 @@ from draw_charts import draw_charts
 from utils import write_to_file
 
 
-SIZE = 500000
-TIMES = 20
-OUTPUT_FILE = 'data_string_test.json'
+SIZE = 5000000
+TIMES = 50
+OUTPUT_FILE = 'largest_string_data.json'
 POSTFIX = 'kc'
 
 def generate_random_string(length: int):
@@ -26,7 +26,6 @@ def filter_lambda_func():
     # filtering
     filtered = list(filter(lambda x: x.endswith(POSTFIX), initial_list))
     end = time.time()
-    # print("filter lambda functime: {:.5f}s".format(end-start))
     return "{:.5f}".format(end-start)
 
 
@@ -43,7 +42,6 @@ def filter_func():
 
     odds = list(filter(custom_filtering_func, initial_list))
     end = time.time()
-    # print("filter func time: {:.5f}s".format(end-start))
     return "{:.5f}".format(end-start)
 
 def list_comp_func():
@@ -53,7 +51,6 @@ def list_comp_func():
     # filtering
     odds = [x for x in initial_list if x.endswith(POSTFIX)]
     end = time.time()
-    # print("list compr time: {:.5f}s".format(end-start))
     return "{:.5f}".format(end-start)
 
 def generator_func():
@@ -66,7 +63,6 @@ def generator_func():
     for el in odds:
         output.append(el)
     end = time.time()
-    # print("generator time: {:.5f}s".format(end-start))
     return "{:.5f}".format(end-start)
 
 
@@ -80,7 +76,6 @@ def primitive_func():
         if element.endswith(POSTFIX):
             odds.append(element)
     end = time.time()
-    # print("primitive func time: {:.5f}s".format(end-start))
     return "{:.5f}".format(end-start)
 
 
@@ -94,8 +89,7 @@ def main():
     iteration = 0
     
     for _ in range(TIMES):
-        # print(f"ITERATION: {iteration}/{TIMES}")
-        print(f"ITERATION: {iteration/TIMES*100}%")
+        print(f"iteration: {iteration/TIMES*100}%")
         filter_func_times.append(filter_func())
         primitive_func_times.append(primitive_func())
         filter_lambda_func_times.append(filter_lambda_func())
