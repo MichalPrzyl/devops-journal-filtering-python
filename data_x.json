@@ -1,0 +1,22 @@
+{
+    "primitive_func_times": [
+        "0.040",
+        "0.041"
+    ],
+    "filter_func_times": [
+        "0.051",
+        "0.052"
+    ],
+    "filter_lambda_func_times": [
+        "0.051",
+        "0.053"
+    ],
+    "list_comp_func_times": [
+        "0.032",
+        "0.033"
+    ],
+    "generator_func_times": [
+        "0.047",
+        "0.046"
+    ]
+}

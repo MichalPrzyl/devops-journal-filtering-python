@@ -3,8 +3,9 @@ from draw_charts import draw_charts
 from utils import write_to_file
 
 
-SIZE = 10000000
-TIMES = 5
+SIZE = 1000000
+TIMES = 2
+OUTPUT_FILE = 'data_x.json'
 
 def prepare():
     initial_list = [x for x in range(SIZE)]
@@ -77,36 +78,27 @@ def primitive_func():
 
 def main():
     primitive_func_times = []
-
-    for _ in range(TIMES):
-        primitive_func_times.append(primitive_func())
-    
     filter_func_times = []
+    filter_lambda_func_times = []
+    list_comp_func_times = []
+    generator_func_times = []
+
+    
     for _ in range(TIMES):
         filter_func_times.append(filter_func())
-    
-    filter_lambda_func_times = []
-    for _ in range(TIMES):
+        primitive_func_times.append(primitive_func())
         filter_lambda_func_times.append(filter_lambda_func())
-    
-
-    list_comp_func_times = []
-    for _ in range(TIMES):
         list_comp_func_times.append(list_comp_func())
-
-    generator_func_times = []
-    for _ in range(TIMES):
         generator_func_times.append(generator_func())
 
-    write_to_file({
+
+    write_to_file(OUTPUT_FILE, {
         "primitive_func_times": primitive_func_times,
         "filter_func_times": filter_func_times,
         "filter_lambda_func_times": filter_lambda_func_times,
         "list_comp_func_times": list_comp_func_times,
         "generator_func_times": generator_func_times,
     })
-    # draw_charts()
-          
 
 if __name__ == "__main__":
     main()
