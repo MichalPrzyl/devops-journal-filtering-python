@@ -10,9 +10,6 @@ def draw_charts():
     primivite_func_times = data['primitive_func_times']
     x1 = [index for index in range(len(primivite_func_times))] 
     y1 = [float(x) for x in primivite_func_times]
-    print(f"x1: {x1}")
-    print(f"y1: {y1}")
-
     
     filter_func_times = data['filter_func_times']
     x2 = [index for index in range(len(filter_func_times))] 
@@ -56,3 +53,4 @@ def draw_charts():
 
 if __name__ == "__main__":
     draw_charts()
+    

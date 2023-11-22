@@ -4,7 +4,7 @@ from utils import write_to_file
 
 
 SIZE = 10000000
-TIMES = 50
+TIMES = 5
 
 def prepare():
     initial_list = [x for x in range(SIZE)]
