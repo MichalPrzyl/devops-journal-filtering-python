@@ -1,5 +1,6 @@
 import time
 from draw_charts import draw_charts
+from utils import write_to_file
 
 
 SIZE = 10000000
@@ -97,14 +98,21 @@ def main():
     for _ in range(TIMES):
         generator_func_times.append(generator_func())
 
-    draw_charts({
-            "primitive_func_times": primitive_func_times,
-            "filter_func_times": filter_func_times,
-            "filter_lambda_func_times": filter_lambda_func_times,
-            "list_comp_func_times": list_comp_func_times,
-            "generator_func_times": generator_func_times,
-            }
-    )
+    write_to_file({
+        "primitive_func_times": primitive_func_times,
+        "filter_func_times": filter_func_times,
+        "filter_lambda_func_times": filter_lambda_func_times,
+        "list_comp_func_times": list_comp_func_times,
+        "generator_func_times": generator_func_times,
+    })
+    # draw_charts({
+    #         "primitive_func_times": primitive_func_times,
+    #         "filter_func_times": filter_func_times,
+    #         "filter_lambda_func_times": filter_lambda_func_times,
+    #         "list_comp_func_times": list_comp_func_times,
+    #         "generator_func_times": generator_func_times,
+    #         }
+    # )
 
 if __name__ == "__main__":
     main()
