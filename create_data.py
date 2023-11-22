@@ -3,8 +3,8 @@ from draw_charts import draw_charts
 from utils import write_to_file
 
 
-SIZE = 1000000
-TIMES = 2
+SIZE = 100000
+TIMES = 200
 OUTPUT_FILE = 'data_x.json'
 
 def prepare():
@@ -18,8 +18,8 @@ def filter_lambda_func():
     # filtering
     odds = list(filter(lambda x: x%2==0, initial_list))
     end = time.time()
-    # print("filter lambda functime: {:.3f}s".format(end-start))
-    return "{:.3f}".format(end-start)
+    # print("filter lambda functime: {:.5f}s".format(end-start))
+    return "{:.5f}".format(end-start)
 
 
 def filter_func():
@@ -35,8 +35,8 @@ def filter_func():
 
     odds = list(filter(custom_filtering_func, initial_list))
     end = time.time()
-    # print("filter func time: {:.3f}s".format(end-start))
-    return "{:.3f}".format(end-start)
+    # print("filter func time: {:.5f}s".format(end-start))
+    return "{:.5f}".format(end-start)
 
 def list_comp_func():
     initial_list = prepare()
@@ -45,8 +45,8 @@ def list_comp_func():
     # filtering
     odds = [x for x in initial_list if x%2==0]
     end = time.time()
-    # print("list compr time: {:.3f}s".format(end-start))
-    return "{:.3f}".format(end-start)
+    # print("list compr time: {:.5f}s".format(end-start))
+    return "{:.5f}".format(end-start)
 
 def generator_func():
     initial_list = prepare()
@@ -58,8 +58,8 @@ def generator_func():
     for el in odds:
         output.append(el)
     end = time.time()
-    # print("generator time: {:.3f}s".format(end-start))
-    return "{:.3f}".format(end-start)
+    # print("generator time: {:.5f}s".format(end-start))
+    return "{:.5f}".format(end-start)
 
 
 def primitive_func():
@@ -72,8 +72,8 @@ def primitive_func():
         if element %2 == 0:
             odds.append(element)
     end = time.time()
-    # print("primitive func time: {:.3f}s".format(end-start))
-    return "{:.3f}".format(end-start)
+    # print("primitive func time: {:.5f}s".format(end-start))
+    return "{:.5f}".format(end-start)
 
 
 def main():

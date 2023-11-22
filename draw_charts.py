@@ -2,9 +2,10 @@ import matplotlib.pyplot as plt
 import matplotlib
 import json
 
+FILE_TO_READ_DATA = 'data_x.json'
 
 def draw_charts():
-    with open('data.json') as json_file:
+    with open(FILE_TO_READ_DATA) as json_file:
         data = json.load(json_file)
 
     primivite_func_times = data['primitive_func_times']
@@ -53,4 +54,3 @@ def draw_charts():
 
 if __name__ == "__main__":
     draw_charts()
-    
