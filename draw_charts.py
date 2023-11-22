@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 import json
 
-FILE_TO_READ_DATA = 'data_x.json'
+FILE_TO_READ_DATA = 'largest_data.json'
 
 def draw_charts():
     with open(FILE_TO_READ_DATA) as json_file:
