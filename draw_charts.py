@@ -1,9 +1,6 @@
 import matplotlib.pyplot as plt 
-# from matplotlib import rcParams
 import matplotlib
 import json
-
-
 
 
 def draw_charts():
@@ -30,7 +27,6 @@ def draw_charts():
     generator_func_times = data['generator_func_times']
     x5 = [index for index in range(len(generator_func_times))] 
     y5 = generator_func_times
-
     
     fig, ax = plt.subplots(figsize=(10, 8)) 
 
