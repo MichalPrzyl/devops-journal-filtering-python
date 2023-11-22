@@ -5,6 +5,7 @@ This repo is created for storing code and data for blog post in https://devops-j
 - [ ] filtering nested dicts
 - [ ] what about generators while filtering strings? Why are they faster?
 - [ ] structure data (json files) so everybody can use it properly
+- [ ] Add "How to run" section
 
 # Charts
 
