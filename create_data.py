@@ -3,8 +3,8 @@ from draw_charts import draw_charts
 from utils import write_to_file
 
 
-SIZE = 100000
-TIMES = 200
+SIZE = 5000000
+TIMES = 50
 OUTPUT_FILE = 'data_x.json'
 
 def prepare():
@@ -73,6 +73,7 @@ def primitive_func():
             odds.append(element)
     end = time.time()
     # print("primitive func time: {:.5f}s".format(end-start))
+    print(f"finished primitive function")
     return "{:.5f}".format(end-start)
 
 
