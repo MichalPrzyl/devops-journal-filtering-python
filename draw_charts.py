@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib
 import json
 
-FILE_TO_READ_DATA = 'data_string.json'
+FILE_TO_READ_DATA = 'data_string_test.json'
 
 def draw_charts():
     with open(FILE_TO_READ_DATA) as json_file:

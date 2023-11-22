@@ -5,18 +5,18 @@ from draw_charts import draw_charts
 from utils import write_to_file
 
 
-SIZE = 5000000
-TIMES = 10
-OUTPUT_FILE = 'data_string.json'
+SIZE = 500000
+TIMES = 20
+OUTPUT_FILE = 'data_string_test.json'
 POSTFIX = 'kc'
-STRING_LENGTH = 5
 
 def generate_random_string(length: int):
     characters = string.ascii_letters
     return ''.join(random.choice(characters) for _ in range(length))
 
 def prepare():
-    initial_list = [generate_random_string(STRING_LENGTH) for _ in range(SIZE)]
+    random_length = random.randint(5,13)
+    initial_list = [generate_random_string(random_length) for _ in range(SIZE)]
     return initial_list
 
 
