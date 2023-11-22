@@ -1,19 +1,23 @@
 import matplotlib.pyplot as plt 
+from matplotlib import rcParams
 import json
+
+
+
 
 def draw_charts():
     with open('data.json') as json_file:
         data = json.load(json_file)
 
+    rcParams.update({'font.size': 10})
     primivite_func_times = data['primitive_func_times']
-    
     x1 = [index for index in range(len(primivite_func_times))] 
     y1 = primivite_func_times
     print(f"x1: {x1}")
     print(f"y1: {y1}")
     # plotting the line 1 points  
-    plt.plot(x1, y1, label = "primitive function") 
-
+    plt.plot(x1, y1, label = "primitive function", linewidth=1.0) 
+    plt.rc('ytick', labelsize=1)    # fontsize of the tick labels
     
     # 2nd
     filter_func_times = data['filter_func_times']
