@@ -5,8 +5,8 @@ from draw_charts import draw_charts
 from utils import write_to_file
 
 
-SIZE = 100000
-TIMES = 20
+SIZE = 5000000
+TIMES = 10
 OUTPUT_FILE = 'data_string.json'
 POSTFIX = 'kc'
 STRING_LENGTH = 5
