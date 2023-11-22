@@ -7,6 +7,13 @@ This repo is created for storing code and data for blog post in https://devops-j
 - [ ] structure data (json files) so everybody can use it properly
 
 # Charts
+
+## filtering string by `endswith`
+<img src="Screens/largest_string_data.PNG" width="500">
+
+
+
+## filtering odd numbers
 Remember! Generator is casted to list so you lost all advantages of creating generator. It's just for chart purposes!
-<img src="Screens/largest_data.PNG">
+<img src="Screens/largest_data.PNG" width="500">
 
