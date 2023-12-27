@@ -41,11 +41,11 @@ def draw_charts():
     ax.set_ylabel('Time in seconds', fontsize=20)
 
     # plots
-    plt.plot(x1, y1, label = "primitive function", linewidth=1.0, marker='o', color='black') 
-    plt.plot(x2, y2, label = "filter", linewidth=1.0, marker='o', color='blue') 
-    plt.plot(x3, y3, label = "filter with lambda", linewidth=1.0, marker='o', color='red') 
-    plt.plot(x4, y4, label = "list comprehension", linewidth=1.0, marker='o', color='green') 
-    plt.plot(x5, y5, label = "generator", linewidth=1.0, marker='o', color='purple') 
+    plt.plot(x1, y1, label="primitive function", linewidth=1.0, marker='o', color='black') 
+    plt.plot(x2, y2, label="filter", linewidth=1.0, marker='o', color='blue') 
+    plt.plot(x3, y3, label="filter with lambda", linewidth=1.0, marker='o', color='red') 
+    plt.plot(x4, y4, label="list comprehension", linewidth=1.0, marker='o', color='green') 
+    plt.plot(x5, y5, label="generator", linewidth=1.0, marker='o', color='purple') 
 
     plt.title('Filtering in python') 
     plt.legend()
